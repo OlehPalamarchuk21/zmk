@@ -20,10 +20,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |                           |     |  K   |  M    |  ,    |  .   |   /   | (mo 2)PSCRN |
 //               | F11 | F12  | BKSPC |SPACE|  ALT   |                           | GUI |  MO1 | ENTER |  [    |  ]   |
             bindings = <
-&kp ESC   &kp F1       &kp F2   &kp F3   &kp F4    &kp F5                                &kp F6 &kp F7    &kp F8    &kp F9   &kp F10   &kp GRAVE
-&kp TAB   &kp Q        &kp W    &kp F    &kp P     &kp G                                 &kp J  &kp L     &kp U     &kp Y    &kp SEMI  &kp COLON
-&kp CLCK  &kp A        &kp R    &kp S    &kp T     &kp D                                 &kp H  &kp N     &kp E     &kp I    &kp O     &kp SQT
-&kp LSHFT &mt LCTRL Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH  &lt 2 PSCRN
+&kp ESC       &kp F1       &kp F2   &kp F3   &kp F4    &kp F5                                &kp F6 &kp F7    &kp F8    &kp F9   &kp F10   &kp GRAVE
+&kp TAB       &kp Q        &kp W    &kp F    &kp P     &kp G                                 &kp J  &kp L     &kp U     &kp Y    &kp SEMI  &kp COLON
+&kp CLCK      &kp A        &kp R    &kp S    &kp T     &kp D                                 &kp H  &kp N     &kp E     &kp I    &kp O     &kp SQT
+&kp LS(LCTRL) &mt LCTRL Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH  &lt 2 PSCRN
                        &kp F11  &kp F12  &kp BSPC  &mt LSHIFT SPACE &kp LALT    &kp LGUI &mo 1  &kp RET &kp LBRC  &kp RBRC
             >;
 
@@ -42,7 +42,7 @@
 &kp ESC  &none     &none     &kp HASH    &kp DLLR  &none                       &none     &kp PRCNT  &kp CARET &none   &none       &none
 &none    &kp EXCL  &kp AT    &kp UP      &kp EQUAL &kp KP_MULTIPLY             &kp PIPE  &kp N7     &kp N8    &kp N9  &kp AMPS    &none
 &none    &kp LPAR  &kp LEFT  &kp DOWN    &kp RIGHT &kp RPAR                    &kp MINUS &kp N4     &kp N5    &kp N6  &kp KP_PLUS &none
-&none    &kp LCTRL &kp HOME  &kp K_CMENU &kp END   &none     &none      &none  &kp UNDER &kp N1     &kp N2    &kp N3  &kp N0      &none
+&none    &kp LCTRL &kp HOME  &kp K_CMENU &kp END   &none     &none      &none  &kp UNDER &kp N1     &kp N2    &kp N3  &kp N0      &kp LG(LS(S))
                    &none    &none        &kp BSPC  &kp SPACE &kp LALT   &none &none    &none     &kp COMMA &kp DOT
             >;
 
@@ -51,15 +51,15 @@
 
         raise_layer {
 // ----------------------------------------------------                 --------------------------------------------------------
-// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                                 |      |      |       |       |  K_VOL_DN  |  K_VOL_UP |
+// |RESET| BT1  | BT2  |  BT3  |  BT4  |NUMLC |                                 |      |      |       |       |  C_VOL_DN  |  C_VOL_UP |
 // |     | INS  | PSCR | GUI   |       |      |                                 |      |  F24 |  F23  |  F22  |  K_PREV    |  K_NEXT   |
 // |     | ALT  | CTRL | SHIFT |       | CAPS |                                 |      |  F21 |  F20  |  F19  |  K_MUTE    |  PAUSE    |
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |                   |      |      |  F18 |  F17  |  F16  |  F15       |           |
 //              |      |       |       |      |      |                   |      |      |      |  F14  |  F13  |
             bindings = <
-&none     &none   &none   &none  &none   &none                                  &none    &none     &none      &none      &kp K_VOL_DN  &kp K_VOL_UP
-&none     &none   &none   &none  &none   &none                                  &none    &kp F24   &kp F23    &kp F22    &kp K_PREV    &kp K_NEXT
-&none     &none   &none   &none  &none   &none                                  &none    &kp F21   &kp F20    &kp F19    &kp K_MUTE    &kp K_PP
+&C_RESET  &none   &none   &none  &none   &LNLCK                                 &none    &none     &none      &none      &kp C_VOL_DN  &kp C_VOL_UP
+&none     &none   &none   &none  &none   &none                                  &none    &kp F24   &kp F23    &kp F22    &kp C_PREV    &kp C_NEXT
+&none     &none   &none   &none  &none   &none                                  &none    &kp F21   &kp F20    &kp F19    &kp C_MUTE    &kp C_PP
 &none     &none   &none   &none  &none   &none  &none                    &none  &none    &kp F18   &kp F17    &kp F16    &kp F15       &none
                           &none  &none   &none  &none                    &none  &none    &none     &none      &kp F14    &kp F13
             >;
