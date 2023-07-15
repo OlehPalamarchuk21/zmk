@@ -23,7 +23,7 @@
 &kp ESC   &kp F1       &kp F2   &kp F3   &kp F4    &kp F5                                &kp F6 &kp F7    &kp F8    &kp F9   &kp F10   &kp GRAVE
 &kp TAB   &kp Q        &kp W    &kp F    &kp P     &kp G                                 &kp J  &kp L     &kp U     &kp Y    &kp SEMI  &kp COLON
 &kp CLCK  &kp A        &kp R    &kp S    &kp T     &kp D                                 &kp H  &kp N     &kp E     &kp I    &kp O     &kp SQT
-&kp LSHFT &mt LCTRL Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp PSCRN
+&kp LSHFT &mt LCTRL Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH  &lt 2 PSCRN
                        &kp F11  &kp F12  &kp BSPC  &mt LSHIFT SPACE &kp LALT    &kp LGUI &mo 1  &kp RET &kp LBRC  &kp RBRC
             >;
 
@@ -36,32 +36,32 @@
 // |  ESC  |     |     |  #   |   $  |      |                                    |      |   %   |  ^    |      |       |       |
 // |       |  !  |  @  |  UP  |   =  |   *  |                                    |  |   |   7   |   8   |   9  |   &   |       |
 // |       |  (  |  <- | DOWN |  ->  |   )  |                                    |  -   |   6   |   5   |  6   |   +   |       |
-// |       |LCTRL|  -  |  +   |  {   |  }   |                         |  |       |  _   |   1   |   2   |  3   |   0   |       |
+// |       |LCTRL|HOME | MENU |  END |      |                         |  |       |  _   |   1   |   2   |  3   |   0   |       |
 //               |     |      |      |      |                         |  |       |      |       |   ,   |   .  |
             bindings = <
 &kp ESC  &none     &none     &kp HASH    &kp DLLR  &none                       &none     &kp PRCNT  &kp CARET &none   &none       &none
 &none    &kp EXCL  &kp AT    &kp UP      &kp EQUAL &kp KP_MULTIPLY             &kp PIPE  &kp N7     &kp N8    &kp N9  &kp AMPS    &none
-&none    &kp LPAR  &kp LEFT  &kp DOWN    &kp RPAR  &kp C_MUTE                  &kp MINUS &kp N4     &kp N5    &kp N6  &kp KP_PLUS &none
-&trans   &kp LCTRL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &trans     &trans &kp LBKT  &kp N1     &kp N2    &kp N3  &kp N0      &trans
-                   &trans    &trans      &kp BSPC  &kp SPACE &kp LALT   &trans &trans    &trans     &kp COMMA &kp DOT
+&none    &kp LPAR  &kp LEFT  &kp DOWN    &kp RIGHT &kp RPAR                    &kp MINUS &kp N4     &kp N5    &kp N6  &kp KP_PLUS &none
+&none    &kp LCTRL &kp HOME  &kp K_CMENU &kp END   &none     &none      &none  &kp UNDER &kp N1     &kp N2    &kp N3  &kp N0      &none
+                   &none    &none        &kp BSPC  &kp SPACE &kp LALT   &none &none    &none     &kp COMMA &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-// |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//              |      |       |       |      |      |  |      |      |      |       |      |
+// ----------------------------------------------------                 --------------------------------------------------------
+// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                                 |      |      |       |       |  K_VOL_DN  |  K_VOL_UP |
+// |     | INS  | PSCR | GUI   |       |      |                                 |      |  F24 |  F23  |  F22  |  K_PREV    |  K_NEXT   |
+// |     | ALT  | CTRL | SHIFT |       | CAPS |                                 |      |  F21 |  F20  |  F19  |  K_MUTE    |  PAUSE    |
+// |     | UNDO | CUT  | COPY  | PASTE |      |      |                   |      |      |  F18 |  F17  |  F16  |  F15       |           |
+//              |      |       |       |      |      |                   |      |      |      |  F14  |  F13  |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans   &trans    &trans  &trans
-&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
-                        &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
+&none     &none   &none   &none  &none   &none                                  &none    &none     &none      &none      &kp K_VOL_DN  &kp K_VOL_UP
+&none     &none   &none   &none  &none   &none                                  &none    &kp F24   &kp F23    &kp F22    &kp K_PREV    &kp K_NEXT
+&none     &none   &none   &none  &none   &none                                  &none    &kp F21   &kp F20    &kp F19    &kp K_MUTE    &kp K_PP
+&none     &none   &none   &none  &none   &none  &none                    &none  &none    &kp F18   &kp F17    &kp F16    &kp F15       &none
+                          &none  &none   &none  &none                    &none  &none    &none     &none      &kp F14    &kp F13
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
