@@ -23,7 +23,7 @@
 &kp ESC   &kp F1       &kp F2   &kp F3   &kp F4    &kp F5                                &kp F6 &kp F7    &kp F8    &kp F9   &kp F10   &kp GRAVE
 &kp TAB   &kp Q        &kp W    &kp F    &kp P     &kp G                                 &kp J  &kp L     &kp U     &kp Y    &kp SEMI  &kp COLON
 &kp CLCK  &kp A        &kp R    &kp S    &kp T     &kp D                                 &kp H  &kp N     &kp E     &kp I    &kp O     &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp PSCRN
+&kp LSHFT &mt LCTRL Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp PSCRN
                        &kp F11  &kp F12  &kp BSPC  &mt LSHIFT SPACE &kp LALT    &kp LGUI &mo 1  &kp RET &kp LBRC  &kp RBRC
             >;
 
