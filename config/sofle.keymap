@@ -57,7 +57,7 @@
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |                   |      |      |  F18 |  F17  |  F16  |  F15       |           |
 //              |      |       |       |      |      |                   |      |      |      |  F14  |  F13  |
             bindings = <
-&C_RESET  &none   &none   &none  &none   &LNLCK                                 &none    &none     &none      &none      &kp C_VOL_DN  &kp C_VOL_UP
+&C_RESET  &none   &none   &none  &none   &kp LNLCK                              &none    &none     &none      &none      &kp C_VOL_DN  &kp C_VOL_UP
 &none     &none   &none   &none  &none   &none                                  &none    &kp F24   &kp F23    &kp F22    &kp C_PREV    &kp C_NEXT
 &none     &none   &none   &none  &none   &none                                  &none    &kp F21   &kp F20    &kp F19    &kp C_MUTE    &kp C_PP
 &none     &none   &none   &none  &none   &none  &none                    &none  &none    &kp F18   &kp F17    &kp F16    &kp F15       &none
