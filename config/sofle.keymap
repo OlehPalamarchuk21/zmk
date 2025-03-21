@@ -24,7 +24,7 @@
  &kp T    &kp TAB    &kp Q  &kp W    &kp E    &kp R                                     &kp J   &kp L     &kp U     &kp Y    &kp SEMI  &kp COLON
  &kp G    &kp LSHFT  &kp A  &kp S    &kp D    &kp F                                     &kp H   &kp N     &kp E     &kp I    &kp O     &kp SQT
  &kp B    &kp LCTRL  &kp Z  &kp X    &kp C    &kp V                         &kp C_PP    &kp SLCK  &kp K   &kp M     &kp COMMA &kp DOT  &kp FSLH  &lt 2 PSCRN
-                           &kp F11  &kp F12  &kp BSPC  &mt LSHIFT SPACE &kp LALT    &kp LGUI  &mo 1   &kp RET   &kp LBKT  &kp RBKT
+                           &kp F11  &kp F12  &kp BSPC  &kp SPACE &kp LALT    &kp LGUI  &mo 1   &kp RET   &kp LBKT  &kp RBKT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
